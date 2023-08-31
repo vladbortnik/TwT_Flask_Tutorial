@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple HTML Page</title>
+    </head>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to My Simple HTML Page</h1>
+        </header>
+        <main>
+            
+            <!-- Let's write some HTML Content inside app.py: -->
+            <p>{{content}}</p>
+            
+            <!-- Let's write some Python Code inside HTML: -->
+            {% for x in range(10) %}
+                {% if x % 2 != 1 %}
+                    <p> {{x}} </p>
+                {% endif %}
+                
+            {% endfor %}
+
+
+            <!-- Another example: -->
+            {% for x in myList %}
+                <p> {{ x }} </p>
+
+                {% if x == "Vlad" %}
+
+                    <p> name = {{ myList[1] }} </p>
+
+                    {% elif x == "Edik" %}
+                        <p> It could be your ad here! </p>
+
+                    {% else %}
+                        <p> Nothing!!! </p>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </main>
+        <footer>
+
+            <!-- Let's write some MORE HTML Content inside app.py: -->
+            <p>{{content2}}</p>
+
+        </footer>
+    </body>
+</html>
